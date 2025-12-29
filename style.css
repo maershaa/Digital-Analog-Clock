@@ -75,3 +75,71 @@
   font-size: 60px;
   text-shadow: 3px 3px 2px #cecbcd;
 }
+
+/* Реклама */
+.box {
+  display: none;
+  width: 260px;
+  min-height: 180px;
+
+  padding: 16px 18px;
+  box-sizing: border-box;
+
+  background: linear-gradient(
+    135deg,
+    #fef3c7,
+    #fde68a
+  ); /* Тёплый акцентный фон */
+
+  border-radius: 16px;
+  border: 1px solid #f59e0b;
+
+  box-shadow: 0 12px 28px rgba(245, 158, 11, 0.25),
+    0 4px 12px rgba(0, 0, 0, 0.08);
+
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+
+  font-family: system-ui, -apple-system, sans-serif;
+  color: #92400e;
+
+  animation: fadeIn 0.4s ease-out forwards;
+}
+
+/* Заголовок рекламы */
+.box h2 {
+  margin: 0 0 10px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+/* Текст рекламы */
+.box p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.4;
+  color: #4b5563;
+}
+
+/* Таймер */
+.box .js-timer {
+  font-weight: 600;
+  color: #ef4444;
+}
+
+/* Плавное появление */
+.box {
+  animation: fadeIn 0.4s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -94,3 +94,31 @@ setInterval(() => {
   arrowMinutes.style.transform = `rotate(${changeMinutes}deg)`;
   arrowHours.style.transform = `rotate(${changeHours}deg)`;
 }, 1000);
+
+// РЕКЛАМА
+
+const box = document.querySelector('.js-box');
+const titleTimer = document.querySelector('.js-timer');
+let counter = 11;
+setTimeout(() => {
+  box.style.display = 'block';
+
+  const id = setInterval(() => {
+    counter -= 1;
+    titleTimer.textContent = counter;
+
+    if (counter === 0) {
+      clearInterval(id);
+
+      // !Добавляем вместо цыфр после окончания работы таймера - Х и при нажатии на него закрываем рекламу
+      // titleTimer.textContent = 'X';
+      // titleTimer.addEventListener('click', onClick);
+      box.style.display = 'none';
+    }
+  }, 1000);
+}, 5000);
+
+// !Для закрытия через нажатие -Х
+// function onClick() {
+//   box.style.display = 'none';
+// }
